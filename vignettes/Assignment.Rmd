@@ -1,0 +1,65 @@
+---
+title: "Assignment"
+author: "Oriol Alcántara"
+date: "10/4/2020"
+output: html_document
+---
+
+# Package Description
+
+'Assignment' pachage make an analysis, ploting and reading Fatality Analysis Reporting System (FARS) data
+from the National Highway Traffic Safety
+[link](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars).
+
+[FARS](https://en.wikipedia.org/wiki/Fatality_Analysis_Reporting_System) is a nationwide census,
+providing the American public yearly data, regarding faatal injuries suffered in motor vehicle traffic crashes.
+
+# Load Packages
+
+```{r}
+library(Assignment)
+library(maps)
+```
+
+# Included Data
+
+Data files located in:
+
+```{r}
+list.files(system.file('extdata'), package = 'Assignment')
+```
+
+## Package Functions
+
+### Function 'make_filename'
+
+This function returns file name and path to the data files:
+
+```{r}
+make_filename(2015)
+```
+
+### Function 'fars_read_years'
+
+Function to add info to the next 'fars_summarize_years'
+
+```{r}
+fars_read_years(2013)
+```
+
+### Function 'fars_summarize_years'
+
+This function summarizes yearly accidents data, by month and year
+
+```{r}
+plot(fars_summarize_years(2015))
+fars_summarize_years(c(2015, 2014))
+```
+
+### Function 'fars_map_state'
+
+Displays a map indicating the accidents locations
+
+```{r}
+fars_map_state(49, 2014)
+
