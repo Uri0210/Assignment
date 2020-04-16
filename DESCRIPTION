@@ -2,6 +2,7 @@ Package: Assignment
 Type: Package
 Title: Read Fatality Analysis Reporting System (FARS) data
 Version: 0.1.0
+License: GPL-3
 Authors@R: person("Oriol", "Alcántara", email = "alcantara.oriol@gmail.com",
                   role = c("aut", "cre"))
 Description: Peer-Graded Assignment, Coursera
